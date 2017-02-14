@@ -3,12 +3,25 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: *In this case we have defined another set of rules by adding the constraint that diagonal have to be unique. This affects what we consider peers of a box. So, we perform constraint propagation by repeatedly enforcing this new rules used by the strategies implemented such eliminate and only_choice.*
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: *This is a tricky one because, Naked Twins is a strategy by itself, therefore, is another constraint that we can use in each step when solving sudoku which helps us reduce the set of possible solutions. But, in addition to that, when we implement this statregy we are using a constraint, that when two cells are twins, the rest of the cells of this unit can contain those numbers, and we propagate it for all units. Thus, naked twins use constraint propagation and it's used by sudoku as a constraint that is propagated.*
 
+To enforce these rules, we use constraint propagation. As explained in [4], constraint satisfaction is the process of finding a solution to a set of constraints that impose conditions that variables must satisfy. A solution is therefore a set of values for the variables that satisfies all constraints. To converge toward that set of values, we repeatedly enforce the strategy rules, reducing the set of possible values toward a possible solution for the Sudoku. As explained in [5], this rule enforcement (a.k.a. transformation) is called constraint propagation.*
+
+Constraint Propagation
+
+As explained in [4], constraint satisfaction is the process of finding a solution to a set of 
+constraints that impose conditions that variables must satisfy. 
+A solution is therefore a set of values for the variables that satisfies all constraints. 
+To converge toward that set of values, we repeatedly enforce the strategy rules, 
+reducing the set of possible values toward a possible solution for the Sudoku. 
+As explained in [5], this rule enforcement (a.k.a. transformation) 
+is called constraint propagation.
+   
+   
 ### Install
 
 This project requires **Python 3**.
